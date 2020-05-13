@@ -1,0 +1,31 @@
+:root {
+  --dot-width: 44px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #1b1b1c;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--dot-width));
+  grid-template-rows: repeat(auto-fill, var(--dot-width));
+  height: calc(100vh + var(--dot-width) * 2);
+  width: calc(100vw + var(--dot-width) * 2);
+}
+.content div {
+  width: 100%;
+  height: var(--dot-width);
+  width: var(--dot-width);
+  will-change: transform, background;
+  height: 100%;
+  border: 2.5px solid #1b1b1c;
+  background: #63b5d0;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
